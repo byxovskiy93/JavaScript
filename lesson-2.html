@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 2 урок</title>
+</head>
+<script>
+
+    /*var a = 1, b = 1, c, d;
+    c = ++a; alert(c); // 2
+    d = b++; alert(d); // 1
+    c = (2+ ++a); alert(c); // 5
+    d = (2+ b++); alert(d); // 4
+    alert(a); // 3
+    alert(b); // 3*/
+
+   //Это связано с использованием разных унарных операторов,
+   //++a унарных операторов инкрементирования в префиксной форме
+   //- инкрементирование производится сразу и возврат происходит уже с обновлённым значением
+   //b++ унарных операторов инкрементирования в постфиксной форме
+   //- сначала происходит возвращение значения,
+   //а потом выполняется инкрементирования
+
+   // 2) Задание
+
+    var t = 2;
+    var x = 1 + (t *= 2);
+
+    // * будет выполнено в первую очередь потом присвоение результата к переменной
+    // x будет равен 5
+
+
+    // 3) Задание
+
+    var numberOne = Math.trunc(Math.random() * 100 - Math.random() * 100);
+    var numberTwo = Math.trunc(Math.random() * 100 - Math.random() * 100);
+
+    // тестируем
+    console.log(numberFunction(numberOne,numberTwo));
+
+    function numberFunction(a,b) {
+        if(a > 0 && b > 0) return Math.abs(a - b);
+        if(a < 0 && b < 0) return Math.abs(a * b);
+        return Math.abs(a + b);
+    }
+
+    // 4) Задание
+
+    //получаем число от 1 до 14;
+    var a = randomInteger(1,14);
+
+    //функция случайного числа
+    function randomInteger(min, max) {
+        var rand = min - 0.5 + Math.random() * (max - min + 1);
+        rand = Math.round(rand);
+        return rand;
+    }
+
+    //тестируем
+    switchFunction(a);
+
+    // Переключатель оборачиваем в функцию так удобнее
+    function switchFunction(a) {
+        switch (a) {
+            case (1):
+                alert(1);
+            case (2):
+                alert(2);
+            case (3):
+                alert(3);
+            case (4):
+                alert(4);
+            case (5):
+                alert(5);
+            case (6):
+                alert(6);
+            case (7):
+                alert(7);
+            case (8):
+                alert(8);
+            case (9):
+                alert(9);
+            case (10):
+                alert(10);
+            case (11):
+                alert(11);
+            case (12):
+                alert(12);
+            case (13):
+                alert(13);
+            case (14):
+                alert(14);
+            case (15):
+                alert(15);
+                break;
+            default:
+                alert('Число вне диапазона');
+        }
+    }
+
+
+
+
+    //5)задание
+
+        function plus(a,b) {
+            return Number(a) + Number(b);
+        }
+
+        function minus(a,b) {
+            return Number(a) - Number(b);
+        }
+
+        function multiplication(a,b) {
+            return Number(a) * Number(b);
+        }
+
+        function division(a,b) {
+            //если есть ноль выкидываем оповещение
+            if(a === 0 || b === 0){
+                alert("Делить на 0 нельзя!!!");
+                return false;
+            }else{
+                return Number(a) / Number(b);
+            }
+        }
+
+    //6) задание
+
+        //тестируем
+        console.log(calculate(8,8,'деление'));
+
+        function calculate(a,b,operation) {
+            switch (operation) {
+                case 'сложение':
+                 return plus(a,b);
+                case 'вычитание':
+                 return minus(a,b);
+                case 'деление':
+                 return division(a,b);
+                case 'умножение':
+                    return multiplication(a,b);
+                default:
+                    alert('Операция указана неверно, доступны: сложение,вычитание,деление,умножение');
+                    return false;
+            }
+        }
+
+
+     //7) задание
+
+        console.log(0 == null);
+
+     // null указывает на несуществующий объект и иммено по этому
+     // он не являеться равным 0 также как и не являеться равным оператору false
+     // а также он выведен в отдельный тип данных как и NaN.
+
+
+
+    //8) задание
+
+    //тестируем
+    console.log(power(9,9));
+
+    //Рекурсия
+    function power(val, pow){
+       if(pow == 0){return 1};
+       if(pow > 0) {return val * power(val,--pow);}
+
+       //что то пошло не по плану возвращает false
+        return false;
+    }
+
+
+
+</script>
+<body>
+
+</body>
+</html>
