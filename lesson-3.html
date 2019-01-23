@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 3 урок</title>
+    <script>
+
+        //1) Задание
+
+        //Вызываем функцию для проверки
+        console.log(numberPrimes(100));
+
+        function numberPrimes(x) {
+
+            // Объявляем переменную счетчик начинаем с 2 так как это первое простое число
+            let whileCount = 2;
+
+            // Объявляем массив с простыми числами
+
+            let ArrayNumberPrimes = [];
+
+            while (whileCount <= x){
+
+                var divisionCount = 0;
+
+                for(var numberCount=2;numberCount <= whileCount;numberCount++){
+
+                    //Считаем сколько раз можно разделить число
+                    if(whileCount%numberCount == 0){
+                        divisionCount++;
+                    }
+
+                }
+
+                // Простое число можно разделить всего 2 раза
+                if(divisionCount < 3){
+                    ArrayNumberPrimes.push(whileCount);
+                }
+
+                ++whileCount;
+            }
+            // Возвращаем массив простых чисел
+            return ArrayNumberPrimes;
+        }
+
+        //2 задание
+
+        //Вызываем функцию для проверки
+        getNumber(10);
+
+        function getNumber(x) {
+            let i = 0;
+            do{
+                if(i % 2 && i !== 0){console.log(i + ' – нечетное число')}
+                else if(i == 0){console.log(i + ' - это ноль')}
+                else{console.log(i + ' – четное число')}
+                i++;
+            }while (i <= x)
+        }
+
+        //3 задание
+
+        for (var i=0;i < 10;console.log(i++)){}
+
+        // 4 задание
+
+        //Вызываем функцию для проверки
+           pyramid(20);
+
+           function pyramid (x){
+
+                let simbol = "x";
+                let string = '';
+                let i = 0;
+
+                while (i < x){console.log(string+=simbol);i++;}
+
+                //можно и так
+                //for (var t=0;t < x;console.log(string+=simbol) + t++){}
+           }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
