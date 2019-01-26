@@ -1,0 +1,59 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.chess-div {
+     display: block;
+     width: 100%;
+     height: 100%;
+}
+
+.chess-div table {
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    background: #732229;
+    margin: auto auto;
+    border:none;
+    border-spacing: 0;
+}
+
+
+
+
+
+.chess-div table tr{
+    height: 75px;
+}
+
+
+.chess-div table tr:first-child,
+.chess-div table tr:last-child{
+    height: 25px !important;
+    text-align: center;
+    border: none;
+    color: #ecd3ab;
+    text-transform: uppercase;
+}
+
+.chess-div table tr td:first-child,
+.chess-div table tr td:last-child{
+    color: #ecd3ab;
+}
+
+.chess-div table tr td {
+    width: 75px;
+    text-align: center;
+    border: none;
+}
+
+
+.cell-white{
+    background: #ecd3ab;
+}
+
+.cell-black{
+   background: #b16f33;
+}
