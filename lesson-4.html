@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 4 урок</title>
+    <script>
+
+
+        var objInteger = makeNumberObject(959);
+
+        function makeNumberObject(integer) {
+            if(integer > 999){
+                console.log("Ошибка: Диапазон чисел от 0 до 999");
+                return {}
+            }
+
+            var intagerArray = explodeNumber(integer);
+
+            let object = {"единицы":(!!intagerArray[0]) ? intagerArray[0] : 0,"десятки":(!!intagerArray[1]) ? intagerArray[1] : 0, "сотни":(!!intagerArray[2]) ? intagerArray[2] : 0};
+
+            return object;
+
+            function explodeNumber(integer) {
+                let array = [];
+                while (integer) {
+                    array.push(integer % 10);
+                    integer = Math.floor(integer/10);
+                }
+                return array;
+            }
+        }
+
+        //Тестируем
+        console.log(objInteger);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
