@@ -1,0 +1,98 @@
+.gallery{
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-width: 1280px;
+    margin: auto auto;
+}
+
+.show-block{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.show-block img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.gallery .navbar-block{
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.gallery .navbar-block .item{
+    width: 16.444444%;
+    padding: 1px;
+    display: inline-block;
+}
+
+.gallery .navbar-block .item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.gallery .navbar-block .item:hover,
+.gallery .navbar-block .item:focus{
+   cursor: pointer;
+}
+
+.gallery .arrow-right {
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid grey;
+    position: absolute;
+    right: 80px;
+    top: 40%;
+}
+
+.gallery .arrow-left {
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid grey;
+    position: absolute;
+    left: 80px;
+    top: 40%;
+}
+
+.gallery .arrow-right:hover,
+.gallery .arrow-left:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 960px){
+    .gallery .navbar-block .item{
+        width: 33%;
+        padding: 1px;
+        display: inline-block;
+    }
+
+    .gallery {
+        width: 80%;
+    }
+
+    .gallery .arrow-right {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid grey;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+    }
+
+    .gallery .arrow-left {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid grey;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+    }
+}
