@@ -10,10 +10,11 @@ let px;
 let py;
 
 
-var score = 0; // очки
+//var score = 0; // очки
 
-var life = 3; // количество жизней по умолчанию
+let life = 3; // количество жизней по умолчанию
 
+let countScore = counterScore();
 
 
 
@@ -122,6 +123,7 @@ function spawnWall() {
 
 // итерация рисования экрана
 function loop() {
+
     // logic
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canv.width, canv.height);
@@ -142,7 +144,7 @@ function loop() {
         ctx.fillRect(item.x, item.y, pw, ph);
     });
 
-    console.log(tailPieces);
+    //console.log(tailPieces);
 
     tailPieces.push({ x: px, y: py });
 
@@ -201,8 +203,7 @@ function loop() {
             tailSize += ~~(baseSpeed / 3); // add tailSize length
             speed += 0.3; // add some speed
             spawnApple(); // spawn another apple(-s)
-            score+= 1;
-            showScore();
+            addScore(countScore());
         }
 
 }
@@ -290,8 +291,18 @@ function changeDirection(evt) {
     }
 }
 
+function counterScore() {
+    let score = 0;
 
-function showScore() {
+    function count() {
+        return ++score;
+    }
+
+    return count;
+}
+
+
+function addScore(score) {
     let showBlock = document.getElementById('score');
     showBlock.innerText = score;
 }
@@ -318,10 +329,18 @@ function init() {
         px = ~~(canv.width) / 2;
         py = ~~(canv.height) / 2;
         document.addEventListener('keydown', changeDirection);
-        showScore();
+        //showScore();
         showLife();
 
 
     //start();
 }
     window.onload = init;
+
+let test = counterScore();
+
+console.log(test());
+console.log(test());
+console.log(test());
+console.log(test());
+console.log(test());
