@@ -7,6 +7,61 @@
     <script src="js/snake/snake.js"></script>
     <title>Snake Game</title>
 </head>
+<!--
+
+
+  if (!("a" in window)) {
+        var a = 1;
+    }
+    alert(a);
+
+    // вернет undefined так как переменная (а) была добавлена в глобальный объект window
+    //  а также условие при проверку не будет выполнено что и не даст переопределить переменную а.
+
+   var b = function a(x) {
+       x && a(--x);
+   };
+   alert(a);
+
+   //Будет ошибка на уровне интерпретатора переменная (а) так и не была объявлена, переменной (b) была присвоена анонимная функция.
+
+     function a(x) {
+         return x * 2;
+     }
+     var a;
+
+     alert(a);
+
+    // вернет функцию так как мы уже объявили функцию с именем (а), var (a) не имеет значение так как мы не стали переопределять значение.
+
+
+     function b(x, y, a) {
+         arguments[2] = 10;
+         alert(a);
+     }
+     b(1, 2, 3);
+
+     // Вернет 10 так как мы переопределили значение (а) используя свойство функции arguments.
+
+     function a() {
+            alert(this);
+        }
+     a.call(null);
+
+     // Вернет null или undefined так как по сути мы переопределили this и вместо самой себя this теперь содержится null;
+
+
+
+
+-->
+
+
+
+
+
+
+
+
 
 <body>
 <div class="snake">
@@ -16,7 +71,7 @@
             <div class="icon">
                 <img src="js/snake/images/score.png">
             </div>
-            <span id="score">1</span>
+            <span id="score">0</span>
         </div>
         <div class="life">
             <div class="icon">
