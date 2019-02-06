@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/snake/snake.css">
+    <script src="js/snake/snake.js"></script>
+    <title>Snake Game</title>
+</head>
+
+<body>
+<div class="snake">
+<canvas id="mc" width="600" height="400"></canvas>
+    <div class="info-snake">
+        <div class="score">
+            <div class="icon">
+                <img src="js/snake/images/score.png">
+            </div>
+            <span id="score">1</span>
+        </div>
+        <div class="life">
+            <div class="icon">
+                <img src="js/snake/images/snake.png">
+            </div>
+            <span id="life">2</span>
+        </div>
+        <div class="apple">
+            <div class="icon"></div>
+            - Яблоко
+        </div>
+        <div class="wall">
+            <div class="icon"></div>
+            - Стена
+        </div>
+    </div>
+    <div class="help-snake">
+       <p>Что бы начать игру нажмите пробел!!!</p>
+        <p>
+            У вас есть 3 жизни, при косании змейки с собственой частью тела у вас сгарает одна жизнь.
+            При касании со стеной вы также теряете одну жизнь.
+            Как только количество жизней станет равна 0 игра считается оконченной.
+        </p>
+    </div>
+</div>
+
+</body>
+
+</html>

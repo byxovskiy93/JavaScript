@@ -1,0 +1,71 @@
+html, body {padding: 0;margin: 0;}
+* {box-sizing: border-box;}
+body {background: #ddd; padding: 50px;}
+canvas {
+    background: black;
+    margin: 0 auto;
+    display: block;
+}
+
+.snake .info-snake{
+    display: block;
+    width: 600px;
+    margin: auto auto;
+    padding: 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.snake .info-snake .score,
+.snake .info-snake .life,
+.snake .info-snake .wall,
+.snake .info-snake .apple{
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 10px 0;
+}
+
+.snake .info-snake .score .icon,
+.snake .info-snake .life .icon,
+.snake .info-snake .apple .icon,
+.snake .info-snake .wall .icon{
+   display: inline-block;
+}
+
+.snake .info-snake .score .icon img,
+.snake .info-snake .life .icon img{
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+}
+
+.snake .info-snake .score .icon:after,
+.snake .info-snake .life .icon:after{
+    content: " - ";
+}
+
+.snake .help-snake{
+    display: block;
+    width: 600px;
+    margin: auto auto;
+    padding: 30px 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.snake .info-snake .apple .icon{
+    width: 48px;
+    height: 48px;
+    background: green;
+    vertical-align: middle;
+}
+
+.snake .info-snake .wall .icon{
+    width: 48px;
+    height: 48px;
+    background: grey;
+    vertical-align: middle;
+}
+
