@@ -1,0 +1,126 @@
+body{
+    background: #ececec;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+.content{
+    margin-top: 50px;
+}
+.product {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #c0c0c0;
+    height: 390px;
+    overflow: hidden;
+    padding: 25px 15px;
+    position: relative;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 20px;
+}
+.product:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.product-img {
+    height: 200px;
+}
+.product-title a {
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.product-desc {
+    max-height: 60px;
+    overflow: hidden;
+}
+.product-price {
+    position: relative;
+    width: 100%;
+    color: #d51e08;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+.basket-block{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c0c0c0;
+    padding: 30px;
+    text-align: center;
+}
+
+.basket-block .basket-title{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.product-bottom {
+    background: red;
+    color:#fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-bottom:hover {
+    text-decoration: none;
+    background: #7983ff;
+    color: #fff;
+
+}
+
+.basket-product .product {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.basket-product .product .name {
+    display: block;
+    padding: 0 5px;
+}
+
+.basket-product .product .name:before {
+    content: "Название: ";
+}
+
+.basket-product .product .price {
+    display: block;
+    padding: 0 5px;
+}
+
+.basket-product .product .price:before {
+    content: "Цена: ";
+}
+
+.basket-product .product .price:after {
+    content: " руб.";
+}
+
+.basket-product .product .count {
+    display: block;
+    padding: 0 5px;
+}
+
+.basket-product .product .count:before {
+    content: "Количество: ";
+}
+
+.basket-block .product-sum{
+    font-size: 18px;
+    font-weight: bold;
+}
+
